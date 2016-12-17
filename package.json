@@ -1,0 +1,9 @@
+{
+    "name": "user-api",
+    "main": "main.js",
+    "dependencies": {
+        "express": "",
+        "mongoose": "",
+        "body-parser": ""
+    }
+}
