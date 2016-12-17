@@ -19,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/user');     // connect to test mongo
 app.use(bodyParser.urlencoded({ extended: false }));        //url encoded body parser
 app.use(bodyParser.json());     //json
 
-var port = process.env.PORT || 8080;        // set our port
+var port = process.env.PORT || 8080;        // set the port
 
 /*
  * ROUTES FOR OUR API  
@@ -49,7 +49,7 @@ router.route('/user')
             if (err) {
                 res.send(err);
             } else {
-                res.json({ data: { message: 'User created' } });
+                res.json({ data: { message: 'User created!' } });
             }
         })
     })
@@ -91,7 +91,7 @@ router.route('/users/:user_id')
                 if (err) {
                     res.send(err);
                 } else {
-                    res.json({ message: 'User updated!' });
+                    res.json({ data: { message: 'User updated!' } });
                 }
             });
         })
@@ -104,7 +104,7 @@ router.route('/users/:user_id')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'Successfully deleted' });
+            res.json({ data: { message: 'User deleted!' } });
         });
     });
 
