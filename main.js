@@ -36,7 +36,7 @@ router.use(function (req, res, next) {
 // healthcheck for API
 router.get('/api', function (req, res) {
     res.json({ message: 'API is up and running' });
-})
+});
 
 // routes
 //post the user to mongodb (accessed at POST http://localhost:8080/user)
